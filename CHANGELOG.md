@@ -13,6 +13,10 @@ For a list of issues targeted for the next release, see the [22Q2][] milestone.
 
 **New**:
 
+- **Simplified use of mermaid diagrams**: when using a `mermaid` code block on
+  your page, mermaid is now automatically enabled (needs hugo version >= 0.93.0).
+  For existing sites build with hugo 0.93.0+, parameter `mermaid.enable`
+  can be removed from site config.
 
 **Breaking changes**:
 
@@ -36,6 +40,11 @@ notes][0.5.1]. **BREAKING CHANGES** are documented below.
 
 **Breaking changes**:
 
+- **Tabbed panes, text display**. By default, the content of a tab inside a tabbed
+  pane is shown as code. As of version 0.4 of the shortcode, you can add the
+  parameter `code=false` to your `tabpane` or `tab` shortcode  in order to render
+  tab content(s) as text (markdown or html). As of version 0.5 the name of this
+  parameter was changed, we now use `text=true` in order to mark content as text.
 - **Display logo by default**. Most projects show their logo in the navbar. In
   support of this majority, Docsy now displays a logo by default. For details on
   how to hide the logo (or your brand name), see [Styling your project logo and
