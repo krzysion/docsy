@@ -6,10 +6,27 @@
 
 Useful links: Docsy [releases][] & [tags][]. Jump to the [latest][] release.
 
-For a list of issues targeted for the next release, see the [22Q2][] milestone.
+For a list of issues targeted for the next release, see the [23Q1][] milestone.
 
-## 0.6.0 - next planned release (unpublished yet)
+## 0.7.0 - next planned release (unpublished yet)
 
+**New**:
+
+**Breaking changes**:
+
+- **[Upgraded Bootstrap (#470)][470]** to v5. Details TBC.
+
+**Other changes**:
+
+[470]: https://github.com/google/docsy/issues/470
+
+## [0.6.0][]
+
+For the full list of the changes found in this release, see the [release
+notes][0.6.0].
+
+With this release we declare a feature freeze while we migrate to the newest
+Bootstrap version. See [the announcement][bs-announcement] for more information.
 
 **New**:
 
@@ -18,11 +35,9 @@ For a list of issues targeted for the next release, see the [22Q2][] milestone.
   For existing sites build with hugo 0.93.0+, parameter `mermaid.enable`
   can be removed from site config.
 
-**Breaking changes**:
-
-
-**Other changes**:
-
+- **Add render hook for chem code blocks**: add auto-activation of `math` and
+  `chem` blocks via KateX and mhchem. Support for formula rendering activation
+  on individual pages only. Hugo version >= 0.93.0 required.
 
 ## [0.5.1][]
 
@@ -173,14 +188,16 @@ For a full list of the changes to this release, see the [release notes][0.x.y].
 
 [@deining]: https://github.com/deining
 [@lisafc]: https://github.com/LisaFC
+[0.6.0]: https://github.com/google/docsy/releases/v0.6.0
 [0.5.1]: https://github.com/google/docsy/releases/v0.5.1
 [0.5.0]: https://github.com/google/docsy/releases/v0.5.0
 [0.4.0]: https://github.com/google/docsy/releases/v0.4.0
 [0.3.0]: https://github.com/google/docsy/releases/v0.3.0
 [0.2.0]: https://github.com/google/docsy/releases/v0.2.0
 [0.x.y]: #
-[22q2]: https://github.com/google/docsy/milestone/3
+[23q1]: https://github.com/google/docsy/milestone/6
 [hugo modules]: https://gohugo.io/hugo-modules/
 [latest]: https://github.com/google/docsy/releases/latest
 [releases]: https://github.com/google/docsy/releases
 [tags]: https://github.com/google/docsy/tags
+[bs-announcement]: https://github.com/google/docsy/discussions/1308

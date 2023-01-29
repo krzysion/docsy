@@ -56,13 +56,17 @@
         font-weight: $font-weight-bold;
     }
 
+    .navbar-nav {
+        white-space: nowrap;
+    }
+
     // For .td-search__input styling, see _search.scss
 
     .dropdown {
         min-width: 100px;
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         padding-right: .5rem;
         padding-left: .75rem;
 
@@ -81,9 +85,7 @@
             .navbar-nav {
                 padding-bottom: 2rem;
                 overflow-x: auto;
-                white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
-
             }
         }
     }
