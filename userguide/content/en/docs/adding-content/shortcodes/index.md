@@ -199,12 +199,12 @@ The **imgproc** shortcode finds an image in the current [Page Bundle](/docs/addi
 
 ```go-html-template
 {{</* imgproc spruce Fill "400x450" */>}}
-Norway Spruce Picea abies shoot with foliage buds.
+Norway Spruce <i>Picea abies</i> shoot with foliage buds.
 {{</* /imgproc */>}}
 ```
 
 {{< imgproc spruce Fill "400x450" >}}
-Norway Spruce Picea abies shoot with foliage buds.
+Norway Spruce <i>Picea abies</i> shoot with foliage buds.
 {{< /imgproc >}}
 
 The example above has also a byline with photo attribution added. When using illustrations with a free license from [WikiMedia](https://commons.wikimedia.org/) and similar, you will in most situations need a way to attribute the author or licensor. You can add metadata to your page resources in the page front matter. The `byline` param is used by convention in this theme:
@@ -245,8 +245,8 @@ resources:
 | Parameter        | Description  |
 | ----------------: |------------|
 | 1 | The image filename or enough of it to identify it (we do Glob matching)
-| 2 | Command. One of `Fit`, `Resize` or `Fill`. See [Image Processing Methods](https://gohugo.io/content-management/image-processing/#image-processing-methods).
-| 3 | Processing options, e.g. `400x450`. See [Image Processing Options](https://gohugo.io/content-management/image-processing/#image-processing-methods).
+| 2 | Command. One of `Fit`, `Resize`, `Fill` or `Crop`. See [Image Processing Methods](https://gohugo.io/content-management/image-processing/#image-processing-methods).
+| 3 | Processing options, e.g. `400x450 r180`. See [Image Processing Options](https://gohugo.io/content-management/image-processing/#image-processing-options).
 
 ### swaggerui
 
@@ -331,7 +331,7 @@ in the response headers." you __CAN__ embed it, but when the test says "Great! X
 Sometimes it's very useful to have tabbed panes when authoring content. One common use-case is to show multiple syntax highlighted code blocks that showcase the same problem, and how to solve it in different programming languages. As an example, the tabbed pane below shows the language-specific variants of the famous `Hello world!` program one usually writes first when learning a new programming language:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab "C" >}}
+{{< tab "C" >}}
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -652,7 +652,7 @@ To create a new pipeline, follow the next steps:
 
 ```
 
-This code automatically reads the content of `import/config.yaml` and inserts it
+This code automatically reads the content of `includes/config.yaml` and inserts it
 into the document. The rendered text looks like this:
 
 ---
